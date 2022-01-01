@@ -12,6 +12,7 @@ import CheckEmail from './screens/CheckEmail';
 import CreatePassword from './screens/CreatePassword';
 import SearchDestination from './screens/SearchDestination';
 import SearchLocation from './screens/SearchLocation';
+import ListVehicles from './screens/ListVehicles';
 const App = () => {
   return (
     <View style={styles.body}>
@@ -26,7 +27,8 @@ const App = () => {
       {/* <CheckEmail /> */}
       {/* <CreatePassword /> */}
       {/* <SearchDestination /> */}
-      <SearchLocation />
+      {/* <SearchLocation /> */}
+      <ListVehicles />
     </View>
   );
 };

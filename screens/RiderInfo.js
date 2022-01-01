@@ -13,49 +13,47 @@ const RiderInfo = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <View style={styles.container}>
-          <View style={styles.outerBox}>
-            <Text style={styles.headingText}>Rider Info</Text>
-            <View style={styles.innerBox}>
-              <Text style={styles.tagline}>Please fill out this field</Text>
-              <View>
-                <TextInput
-                  style={styles.textInput}
-                  placeholder="Full Name"
-                  placeholderTextColor="#000"
-                />
-                <TextInput
-                  style={styles.textInput}
-                  placeholder="Your Mobile Number"
-                  placeholderTextColor="#000"
-                />
-                <TextInput
-                  style={styles.textInput}
-                  placeholder="Your Date of Bath"
-                  placeholderTextColor="#000"
-                />
-                <TextInput
-                  style={styles.textInput}
-                  placeholder="Location"
-                  placeholderTextColor="#000"
-                />
-                <TextInput
-                  style={styles.textInput}
-                  secureTextEntry={true}
-                  placeholder="Your Password"
-                  placeholderTextColor="#000"
-                />
-                <TextInput
-                  style={styles.textInput}
-                  secureTextEntry={true}
-                  placeholder="Confirm Password"
-                  placeholderTextColor="#000"
-                />
+        <View style={styles.outerBox}>
+          <Text style={styles.headingText}>Rider Info</Text>
+          <View style={styles.innerBox}>
+            <Text style={styles.tagline}>Please fill out this field</Text>
+            <View>
+              <TextInput
+                style={styles.textInput}
+                placeholder="Full Name"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                placeholder="Your Mobile Number"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                placeholder="Your Date of Bath"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                placeholder="Location"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                secureTextEntry={true}
+                placeholder="Your Password"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                secureTextEntry={true}
+                placeholder="Confirm Password"
+                placeholderTextColor="#000"
+              />
 
-                <TouchableOpacity style={styles.SubmitButtonStyle}>
-                  <Text style={styles.TextStyle}> Next </Text>
-                </TouchableOpacity>
-              </View>
+              <TouchableOpacity style={styles.SubmitButtonStyle}>
+                <Text style={styles.TextStyle}> Next </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -93,8 +91,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 10,
     overflow: 'hidden',
-    paddingLeft: 40,
-    paddingRight: 40,
+    paddingLeft: 30,
+    paddingRight: 30,
     paddingTop: 20,
     paddingBottom: 20,
     textAlign: 'center',
