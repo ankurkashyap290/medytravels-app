@@ -13,6 +13,8 @@ import CreatePassword from './screens/CreatePassword';
 import SearchDestination from './screens/SearchDestination';
 import SearchLocation from './screens/SearchLocation';
 import ListVehicles from './screens/ListVehicles';
+import VehiclesFullList from './screens/VehiclesFullList';
+import RequestSent from './screens/RequestSent';
 const App = () => {
   return (
     <View style={styles.body}>
@@ -28,7 +30,9 @@ const App = () => {
       {/* <CreatePassword /> */}
       {/* <SearchDestination /> */}
       {/* <SearchLocation /> */}
-      <ListVehicles />
+      {/* <ListVehicles /> */}
+      {/* <VehiclesFullList /> */}
+      <RequestSent />
     </View>
   );
 };

@@ -1,0 +1,456 @@
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  Image,
+  TextInput,
+  View,
+  TouchableOpacity,
+  SafeAreaView,
+  ScrollView,
+} from 'react-native';
+
+const VehiclesFullList = () => {
+  return (
+    <SafeAreaView>
+      <ScrollView>
+        <View style={styles.container}>
+          <View style={styles.layout}>
+            <TouchableOpacity style={styles.backButton}>
+              <Image
+                style={styles.tinyLogo}
+                source={require('../assets/images/back.png')}
+              />
+            </TouchableOpacity>
+            <View>
+              <Text style={styles.locationHeading}>
+                This ride has already departed.
+              </Text>
+              <Text style={styles.locationSubLine}>Sat 01 january</Text>
+            </View>
+          </View>
+          <View style={styles.filterLayout}>
+            <View style={styles.filterIconOuter}>
+              <Image
+                style={styles.filterIcon}
+                source={require('../assets/images/person.png')}
+              />
+            </View>
+            <View style={styles.filterTextBox}>
+              <Text style={styles.filterHeading}>
+                ISBT Kashmiri Gate, New Delhi
+              </Text>
+              <Text style={styles.FilterPara}>2.1 km from your departure</Text>
+            </View>
+          </View>
+
+          <View style={styles.filterLayout}>
+            <View style={styles.filterIconOuterOrg}>
+              <Image
+                style={styles.filterIcon}
+                source={require('../assets/images/person.png')}
+              />
+            </View>
+            <View style={styles.filterTextBox}>
+              <Text style={styles.filterHeading}>Nagrota bagwan bus stand</Text>
+              <Text style={styles.FilterPara}>2.2 km from your arrival</Text>
+            </View>
+          </View>
+
+          <View style={styles.innerBox}>
+            <View style={styles.personAvtar}>
+              <View style={styles.avtarIconOuter}>
+                <Image
+                  style={styles.avtarIcon}
+                  source={require('../assets/images/av1.jpg')}
+                />
+              </View>
+              <View style={styles.avtarTextBox}>
+                <Text style={styles.avtarHeading}>Ruby </Text>
+                <Text style={styles.avtarHeading}>5.0/5 ratings</Text>
+                <View style={styles.avtarStars}>
+                  <Image
+                    style={styles.starIcon}
+                    source={require('../assets/images/star.png')}
+                  />
+                  <Image
+                    style={styles.starIcon}
+                    source={require('../assets/images/star.png')}
+                  />
+                  <Image
+                    style={styles.starIcon}
+                    source={require('../assets/images/star.png')}
+                  />
+                  <Image
+                    style={styles.starIcon}
+                    source={require('../assets/images/starno.png')}
+                  />
+                  <Image
+                    style={styles.starIcon}
+                    source={require('../assets/images/starno.png')}
+                  />
+                </View>
+              </View>
+            </View>
+            <Text style={styles.rateText}>
+              Total Price for 1 passenger 900 Rs
+            </Text>
+
+            <View style={styles.timeLayout}>
+              <View style={styles.textCol}>
+                <Text style={styles.timeHeading}>Staring Time</Text>
+                <Text style={styles.timeSubHeading}>10:00 am</Text>
+                <Text style={styles.timeSubHeading}>Delhi</Text>
+              </View>
+              <View>
+                <Text style={styles.timeAp}>10h 40m</Text>
+              </View>
+              <View style={styles.textCol}>
+                <Text style={styles.timeHeading}>Reach time </Text>
+                <Text style={styles.timeSubHeading}>9:00 pm</Text>
+                <Text style={styles.timeSubHeading}>Shahpur</Text>
+              </View>
+            </View>
+            <View style={styles.smokingBox}>
+              <Text style={styles.smoText}>Show your id prof</Text>
+              <Text style={styles.smoText}>
+                Drinking and shmoking not Allowed
+              </Text>
+            </View>
+            <View style={styles.petIconBox}>
+              <Image
+                style={styles.petIcon}
+                source={require('../assets/images/nosmoking.png')}
+              />
+              <Text style={styles.petText}>No Smoking</Text>
+            </View>
+            <View style={styles.petIconBox}>
+              <Image
+                style={styles.petIcon}
+                source={require('../assets/images/nopet.png')}
+              />
+              <Text style={styles.petText}>No Pets</Text>
+            </View>
+            <View style={styles.petIconBox}>
+              <Image
+                style={styles.petIcon}
+                source={require('../assets/images/car.png')}
+              />
+              <Text style={styles.petText}>MARUTI SWIFT DZIRE (Dark grey)</Text>
+            </View>
+          </View>
+
+          <View style={styles.layout}>
+            <Text style={styles.PassHeading}>Passengers</Text>
+          </View>
+          <View style={styles.filterLayout}>
+            <View style={styles.passIconBox}>
+              <Image
+                style={styles.passIcon}
+                source={require('../assets/images/av1.jpg')}
+              />
+            </View>
+            <View style={styles.filterTextBox}>
+              <Text style={styles.filterHeading}>Nindi</Text>
+              <Text style={styles.FilterPara}>New Delhi to Nagrota Bagwan</Text>
+            </View>
+          </View>
+
+          <View style={styles.filterLayout}>
+            <View style={styles.passIconBox}>
+              <Image
+                style={styles.passIcon}
+                source={require('../assets/images/avtar.png')}
+              />
+            </View>
+            <View style={styles.filterTextBox}>
+              <Text style={styles.filterHeading}>Ron david</Text>
+              <Text style={styles.FilterPara}>New Delhi to Nagrota Bagwan</Text>
+            </View>
+          </View>
+          <TouchableOpacity style={styles.alertBox}>
+            <Text style={styles.alertText}> Report ride</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.alertBox}>
+            <Text style={styles.alertText}>Continue</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+export default VehiclesFullList;
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    // alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#0077b6',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 15,
+    paddingBottom: 30,
+  },
+
+  innerBox: {
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
+    marginBottom: 20,
+    marginBottom: 15,
+  },
+  layout: {
+    backgroundColor: '#eee',
+    borderRadius: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 15,
+    paddingRight: 15,
+    marginBottom: 15,
+  },
+  backButton: {
+    width: 30,
+    height: 30,
+    backgroundColor: '#023e8a',
+    borderRadius: 100,
+    textAlign: 'center',
+    paddingLeft: 8,
+    paddingTop: 8,
+    marginRight: 10,
+  },
+  tinyLogo: {
+    width: 15,
+    height: 15,
+  },
+  LocationIcon: {
+    width: 25,
+    height: 25,
+  },
+  searchLocation: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  locationHeading: {
+    fontSize: 16,
+    color: '#000',
+    fontWeight: '600',
+  },
+  locationSubLine: {
+    fontSize: 14,
+    color: '#000',
+  },
+  filterLayout: {
+    backgroundColor: '#023e8a',
+    borderRadius: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 15,
+    paddingBottom: 15,
+    paddingLeft: 15,
+    paddingRight: 15,
+    marginBottom: 15,
+  },
+  filterTextBox: {
+    marginLeft: 10,
+  },
+  filterHeading: {
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: '600',
+  },
+  FilterPara: {
+    fontSize: 16,
+    color: '#fff',
+  },
+  filterIconOuter: {
+    backgroundColor: '#82c91e',
+    width: 40,
+    height: 40,
+    borderRadius: 100,
+    paddingLeft: 14,
+    paddingTop: 6,
+  },
+  filterIconOuterOrg: {
+    backgroundColor: '#D8781B',
+    width: 40,
+    height: 40,
+    borderRadius: 100,
+    paddingLeft: 14,
+    paddingTop: 6,
+  },
+  filterIcon: {
+    width: 10,
+    height: 30,
+  },
+  personAvtar: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: 10,
+  },
+  avtarIconOuter: {
+    width: 40,
+    height: 40,
+    borderRadius: 100,
+    borderRadius: 100,
+    overflow: 'hidden',
+    borderColor: '#82c91e',
+    marginRight: 15,
+  },
+  avtarIcon: {width: 40, height: 40, borderRadius: 100},
+  avtarHeading: {
+    fontSize: 18,
+    color: '#0077b6',
+    fontWeight: '800',
+    marginBottom: 5,
+  },
+  avtarStars: {
+    flexDirection: 'row',
+    marginBottom: 5,
+  },
+  starIcon: {
+    width: 24,
+    height: 24,
+  },
+  rateText: {
+    fontSize: 18,
+    color: '#000',
+    fontWeight: '900',
+    marginBottom: 5,
+    marginBottom: 10,
+  },
+  timeLayout: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  textCol: {
+    flexDirection: 'column',
+    width: 110,
+  },
+  timeHeading: {
+    color: '#000',
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  timeSubHeading: {
+    color: '#023e8a',
+    fontWeight: '900',
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  personNumbers: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  numberPerson: {
+    backgroundColor: '#82c91e',
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+    paddingLeft: 10,
+    paddingTop: 4,
+  },
+  numberPersonNo: {
+    backgroundColor: '#999',
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+    paddingLeft: 10,
+    paddingTop: 4,
+  },
+  numberPersonOrgan: {
+    backgroundColor: '#D8781B',
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+    paddingLeft: 10,
+    paddingTop: 4,
+  },
+  seatIcon: {
+    width: 10,
+    height: 20,
+  },
+  timeAp: {
+    color: '#023e8a',
+    fontSize: 16,
+    fontWeight: '800',
+  },
+  ClickText: {
+    backgroundColor: '#82c91e',
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 18,
+    borderRadius: 20,
+    padding: 10,
+    marginTop: 15,
+  },
+  alertBox: {
+    backgroundColor: '#82c91e',
+    marginTop: 20,
+    marginBottom: 10,
+    borderRadius: 20,
+  },
+  alertText: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '600',
+    textAlign: 'center',
+
+    padding: 10,
+  },
+  petIconBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 6,
+    marginTop: 6,
+  },
+  petIcon: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
+  },
+  petText: {
+    fontSize: 16,
+    color: '#000',
+  },
+  smokingBox: {
+    borderBottomWidth: 1,
+    borderColor: '#999',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  smoText: {
+    fontSize: 16,
+    color: '#999',
+    marginBottom: 6,
+  },
+  PassHeading: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#000',
+  },
+  passIconBox: {
+    width: 40,
+    height: 40,
+    borderWidth: 3,
+    borderColor: '#82c91e',
+    borderRadius: 100,
+    overflow: 'hidden',
+  },
+  passIcon: {
+    width: 40,
+    height: 40,
+  },
+});
