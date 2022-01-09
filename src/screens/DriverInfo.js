@@ -8,7 +8,7 @@ import {
   SafeAreaView,
   ScrollView,
 } from 'react-native';
-
+import theme from '../styles/theme.style';
 export default function DriverInfo() {
   return (
     <SafeAreaView style={styles.container}>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: '#0077b6',
+    backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
   },
@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   headingText: {
-    color: '#fff',
-    fontSize: 24,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 20,
   },
   innerBox: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
     overflow: 'hidden',
     paddingLeft: 30,
@@ -117,15 +117,16 @@ const styles = StyleSheet.create({
     width: 300,
   },
   tagline: {
-    fontSize: 16,
-    color: '#023e8a',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.SECONDARY_COLOR,
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',
+    textAlign: 'center',
   },
   textInput: {
-    color: '#fff',
-    fontSize: 14,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_SMALL,
     backgroundColor: '#eee',
     paddingLeft: 20,
     paddingRight: 20,
@@ -140,12 +141,12 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 100,
-    backgroundColor: '#023e8a',
+    backgroundColor: theme.SECONDARY_COLOR,
   },
   TextStyle: {
     textAlign: 'center',
-    color: '#fff',
-    fontSize: 14,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   lastLInks: {
     marginTop: 20,
@@ -154,8 +155,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   already: {
-    fontSize: 16,
-    color: '#fff',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.APP_BACKGROUND,
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',

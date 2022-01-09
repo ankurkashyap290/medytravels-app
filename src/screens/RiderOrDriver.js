@@ -5,7 +5,7 @@ import RadioForm, {
   RadioButtonInput,
   RadioButtonLabel,
 } from 'react-native-simple-radio-button';
-
+import theme from '../styles/theme.style';
 var radio_props = [
   {label: 'Login as Rider', value: 0},
   {label: 'Login as Driver', value: 1},
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: '#0077b6',
+    backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
   },
@@ -52,14 +52,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   headingText: {
-    color: '#fff',
-    fontSize: 24,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 20,
   },
   innerBox: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
     overflow: 'hidden',
     paddingLeft: 40,
@@ -69,11 +69,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   radioButtons: {
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   buttonText: {
-    fontSize: 16,
-    color: '#fff',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.APP_BACKGROUND,
     fontWeight: '600',
     fontStyle: 'italic',
     textAlign: 'center',

@@ -7,7 +7,7 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-
+import theme from '../styles/theme.style';
 const SearchLocation = () => {
   return (
     <View style={styles.container}>
@@ -50,13 +50,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: '#0077b6',
+    backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
   },
   innerBox: {
     width: 326,
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
     paddingLeft: 20,
     paddingRight: 20,
@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   textInput: {
-    color: '#fff',
-    fontSize: 16,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     backgroundColor: '#eee',
     paddingLeft: 20,
     paddingRight: 20,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   backButton: {
     width: 30,
     height: 30,
-    backgroundColor: '#023e8a',
+    backgroundColor: theme.SECONDARY_COLOR,
     borderRadius: 100,
     textAlign: 'center',
     paddingLeft: 8,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   searchHeading: {
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#000',
   },
 });

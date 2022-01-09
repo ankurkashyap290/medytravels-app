@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-
+import theme from '../styles/theme.style';
 const RequestSent = () => {
   return (
     <View style={styles.container}>
@@ -39,9 +39,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   logo: {
-    fontSize: 30,
+    fontSize: theme.FONT_SIZE_EXTRA_LARGE,
     fontWeight: '700',
-    color: '#023e8a',
+    color: theme.SECONDARY_COLOR,
     textAlign: 'center',
     fontStyle: 'italic',
     marginTop: 60,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     height: 320,
   },
   tagLine: {
-    fontSize: 26,
+    fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '300',
     marginTop: 40,
     color: '#333',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   nextButton: {
     marginTop: 26,
-    backgroundColor: '#0077b6',
+    backgroundColor: theme.PRIMARY_COLOR,
     paddingLeft: 26,
     paddingRight: 26,
     paddingTop: 10,
@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
   },
   loginText: {
     paddingRight: 10,
-    fontSize: 20,
-    color: '#fff',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.APP_BACKGROUND,
   },
   arrowRight: {
     width: 18,

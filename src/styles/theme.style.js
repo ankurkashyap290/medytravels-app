@@ -1,7 +1,7 @@
 import {DefaultTheme} from 'react-native-paper';
 // const darkBlue = "#0065AB";
-const primaryColor = '#FFD32A';
-const secondaryColor = '#2A2E43';
+const primaryColor = '#5FBD45';
+const secondaryColor = '#41AB25';
 
 // const infoColor = "#61C2FF";
 // const brightGreen = "#1DFF00";
@@ -72,8 +72,9 @@ export default {
   FONT_SIZE_EXTRA_SMALL: 13,
   FONT_SIZE_SMALL: 14,
   FONT_SIZE_MEDIUM: 16,
-  FONT_SIZE_LARGE: 20,
-  FONT_SIZE_EXTRA_LARGE: 40,
+  FONT_SIZE_MEDIUM_OVER: 18,
+  FONT_SIZE_LARGE: 24,
+  FONT_SIZE_EXTRA_LARGE: 30,
   PRIMARY_COLOR: primaryColor,
   SECONDARY_COLOR: secondaryColor,
   FONT_WEIGHT_LIGHT: '300',
