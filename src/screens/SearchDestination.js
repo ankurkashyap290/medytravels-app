@@ -9,6 +9,8 @@ import {
   Button,
 } from 'react-native';
 import DatePicker from 'react-native-date-picker';
+import theme from '../styles/theme.style';
+
 const SearchDestination = () => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: '#0077b6',
+    backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
   },
@@ -102,14 +104,14 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   headingText: {
-    color: '#fff',
-    fontSize: 24,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 20,
   },
   innerBox: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
     overflow: 'hidden',
     paddingLeft: 20,
@@ -120,16 +122,16 @@ const styles = StyleSheet.create({
     width: 326,
   },
   tagline: {
-    fontSize: 16,
-    color: '#023e8a',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.SECONDARY_COLOR,
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',
     textAlign: 'center',
   },
   textInput: {
-    color: '#fff',
-    fontSize: 14,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     backgroundColor: '#eee',
     paddingLeft: 20,
     paddingRight: 20,
@@ -144,12 +146,12 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 100,
-    backgroundColor: '#023e8a',
+    backgroundColor: theme.SECONDARY_COLOR,
   },
   TextStyle: {
     textAlign: 'center',
-    color: '#fff',
-    fontSize: 14,
+    color: theme.APP_BACKGROUND,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   selectDateStyle: {
     paddingLeft: 20,
@@ -159,7 +161,11 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: '#eee',
   },
-  DateStyle: {textAlign: 'center', color: '#000', fontSize: 14},
+  DateStyle: {
+    textAlign: 'center',
+    color: '#000',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+  },
   dateBox: {
     flexDirection: 'row',
     justifyContent: 'space-between',

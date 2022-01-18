@@ -9,7 +9,7 @@ import {
   SafeAreaView,
   ScrollView,
 } from 'react-native';
-
+import theme from '../styles/theme.style';
 const ListVehicles = () => {
   return (
     <SafeAreaView style={styles.container}>
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: '#0077b6',
+    backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
   },
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   innerBox: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
     paddingLeft: 10,
     paddingRight: 10,
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   backButton: {
     width: 30,
     height: 30,
-    backgroundColor: '#023e8a',
+    backgroundColor: theme.SECONDARY_COLOR,
     borderRadius: 100,
     textAlign: 'center',
     paddingLeft: 8,
@@ -306,16 +306,16 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   locationHeading: {
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#000',
     fontWeight: '600',
   },
   locationSubLine: {
-    fontSize: 14,
+    fontSize: theme.FONT_SIZE_SMALL,
     color: '#000',
   },
   filterLayout: {
-    backgroundColor: '#023e8a',
+    backgroundColor: theme.SECONDARY_COLOR,
     borderRadius: 20,
     flexDirection: 'row',
     alignItems: 'center',
@@ -329,13 +329,13 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   filterHeading: {
-    fontSize: 18,
-    color: '#fff',
+    fontSize: theme.FONT_SIZE_MEDIUM_OVER,
+    color: theme.APP_BACKGROUND,
     fontWeight: '600',
   },
   FilterPara: {
-    fontSize: 16,
-    color: '#fff',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.APP_BACKGROUND,
   },
   filterIconOuter: {
     backgroundColor: '#82c91e',
@@ -365,7 +365,7 @@ const styles = StyleSheet.create({
   },
   avtarIcon: {width: 40, height: 40, borderRadius: 100},
   avtarHeading: {
-    fontSize: 18,
+    fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: '#0077b6',
     fontWeight: '800',
     marginBottom: 5,
@@ -379,7 +379,7 @@ const styles = StyleSheet.create({
     height: 24,
   },
   rateText: {
-    fontSize: 18,
+    fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: '#000',
     fontWeight: '900',
     marginBottom: 5,
@@ -395,13 +395,13 @@ const styles = StyleSheet.create({
   },
   timeHeading: {
     color: '#000',
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     marginBottom: 10,
   },
   timeSubHeading: {
-    color: '#023e8a',
+    color: theme.SECONDARY_COLOR,
     fontWeight: '900',
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     marginBottom: 10,
   },
   personNumbers: {
@@ -437,31 +437,30 @@ const styles = StyleSheet.create({
     height: 20,
   },
   timeAp: {
-    color: '#023e8a',
-    fontSize: 16,
+    color: theme.SECONDARY_COLOR,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: '800',
   },
   ClickText: {
     backgroundColor: '#82c91e',
-    color: '#fff',
+    color: theme.APP_BACKGROUND,
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     borderRadius: 20,
     padding: 10,
     marginTop: 15,
   },
   alertBox: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
     marginTop: 20,
     marginBottom: 100,
     borderRadius: 20,
   },
   alertText: {
     color: '#000',
-    fontSize: 20,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: '600',
     textAlign: 'center',
-
     padding: 10,
   },
 });

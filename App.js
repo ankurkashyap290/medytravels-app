@@ -26,30 +26,52 @@ import RequestSent from './src/screens/RequestSent';
 
 const App = () => {
   return (
-    // <Provider store={store}>
-    <SafeAreaProvider>
+    <>
+      {/* <Provider store={store}> */}
+      {/* <SafeAreaProvider> */}
       <PaperProvider theme={theme.DEFAULT_THEME}>
-        <SafeAreaView
-          forceInset={{top: 'never', bottom: 'never'}}
-          style={{
-            flex: 1,
-            backgroundColor: 'transparent',
-            ...ifIphoneX(
-              {
-                paddingTop: 0, //getStatusBarHeight(),
-                paddingBottom: 0, // getBottomSpace(),
-              },
-              {
-                paddingTop: 0,
-                paddingBottom: 0,
-              },
-            ),
-          }}>
-          <AppNavigator />
-          {/* <AppNotifier /> */}
-        </SafeAreaView>
+        <Welcome />
+        {/* <Login /> */}
+        {/* <SignUp /> */}
+        {/* <RiderOrDriver /> */}
+        {/* <DriverInfo /> */}
+        {/* <RiderInfo /> */}
+        {/* <OTP /> */}
+        {/* <ForgotPassword /> */}
+        {/* <CheckEmail /> */}
+        {/* <CreatePassword /> */}
+        {/* <SearchDestination /> */}
+        {/* <SearchLocation /> */}
+        {/* <ListVehicles /> */}
+        {/* <VehiclesFullList /> */}
+        {/* <RequestSent /> */}
       </PaperProvider>
-    </SafeAreaProvider>
+    </>
+
+    // <Provider store={store}>
+    // <SafeAreaProvider>
+    //   <PaperProvider theme={theme.DEFAULT_THEME}>
+    //     <SafeAreaView
+    //       forceInset={{top: 'never', bottom: 'never'}}
+    //       style={{
+    //         flex: 1,
+    //         backgroundColor: 'transparent',
+    //         ...ifIphoneX(
+    //           {
+    //             paddingTop: 0, //getStatusBarHeight(),
+    //             paddingBottom: 0, // getBottomSpace(),
+    //           },
+    //           {
+    //             paddingTop: 0,
+    //             paddingBottom: 0,
+    //           },
+    //         ),
+    //       }}>
+    //       <AppNavigator />
+    //       {/* <AppNotifier /> */}
+    //     </SafeAreaView>
+    //   </PaperProvider>
+    // </SafeAreaProvider>
     // </Provider>
     // <View style={styles.body}>
     //   {/* <Welcome /> */}
@@ -76,6 +98,6 @@ export default App;
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: theme.APP_BACKGROUND,
   },
 });
