@@ -8,6 +8,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     display: 'flex',
+    height: '100%',
+    backgroundColor: theme.WHITE_COLOR,
   },
   logo: {
     fontSize: theme.FONT_SIZE_EXTRA_LARGE,

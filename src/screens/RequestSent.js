@@ -37,6 +37,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    height: '100%',
+    backgroundColor: theme.WHITE_COLOR,
   },
   logo: {
     fontSize: theme.FONT_SIZE_EXTRA_LARGE,

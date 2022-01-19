@@ -16,6 +16,7 @@ const black100 = '#454F63';
 // const black16 = "#DEDEDE";
 // const black4 = "#F7F7F7";
 const offWhite = '#F8FCFF';
+const whiteColor = '#F8FCFF';
 
 const theme = {
   ...DefaultTheme,
@@ -85,6 +86,7 @@ export default {
   ERROR_COLOR: warningColor,
   ACTIVE_COLOR: '#64bc46',
   BLACK_COLOR: blackColor,
+  WHITE_COLOR: whiteColor,
   INACTIVE_COLOR: '#000000',
   // LIGHT_BLUE: lightBlue,
   DEFAULT_THEME: theme,
