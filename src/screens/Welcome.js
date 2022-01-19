@@ -10,7 +10,7 @@ const Welcome = () => {
       <View style={styles.mainCar}>
         <Image
           style={styles.tinyLogo}
-          source={require('../../assets/images/welcome-car.png')}
+          source={require('../../assets/images/welcome.png')}
         />
       </View>
       <Text style={styles.tagLine}>Your pick of rides at low prices</Text>
@@ -18,10 +18,10 @@ const Welcome = () => {
         style={styles.nextButton}
         onPress={() => NavigationService.navigate('Login')}
         underlayColor="#fff">
-        <Text style={styles.loginText}>Go</Text>
+        {/* <Text style={styles.loginText}>Go</Text> */}
         <Image
           style={styles.arrowRight}
-          source={require('../../assets/images/arrowright.png')}
+          source={require('../../assets/images/arrowright-black.png')}
         />
       </TouchableOpacity>
     </View>

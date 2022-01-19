@@ -1,13 +1,14 @@
 import {DefaultTheme} from 'react-native-paper';
 // const darkBlue = "#0065AB";
-const primaryColor = '#5FBD45';
-const secondaryColor = '#41AB25';
+const primaryColor = '#ffc100';
+const secondaryColor = '#ffa800';
 
 // const infoColor = "#61C2FF";
 // const brightGreen = "#1DFF00";
 // const successColor = "#54B948";
 const dangerColor = '#FE4A5E';
 const warningColor = '#DD9900';
+const blackColor = '#0c0300';
 const black100 = '#454F63';
 // const black86 = "#4F4F4F";
 // const black60 = "#858585";
@@ -83,6 +84,7 @@ export default {
   APP_BACKGROUND: '#ffffff',
   ERROR_COLOR: warningColor,
   ACTIVE_COLOR: '#64bc46',
+  BLACK_COLOR: blackColor,
   INACTIVE_COLOR: '#000000',
   // LIGHT_BLUE: lightBlue,
   DEFAULT_THEME: theme,

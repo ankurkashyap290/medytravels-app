@@ -21,7 +21,7 @@ const RequestSent = () => {
         <Text style={styles.loginText}>OK</Text>
         <Image
           style={styles.arrowRight}
-          source={require('../../assets/images/arrowright.png')}
+          source={require('../../assets/images/arrowright-black.png')}
         />
       </TouchableOpacity>
     </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: theme.FONT_SIZE_EXTRA_LARGE,
     fontWeight: '700',
-    color: theme.SECONDARY_COLOR,
+    color: theme.BLACK_COLOR,
     textAlign: 'center',
     fontStyle: 'italic',
     marginTop: 60,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   loginText: {
     paddingRight: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.APP_BACKGROUND,
+    color: theme.BLACK_COLOR,
   },
   arrowRight: {
     width: 18,
