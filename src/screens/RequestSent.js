@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import theme from '../styles/theme.style';
+import Icon from 'react-native-vector-icons/Ionicons';
 const RequestSent = () => {
   return (
     <View style={styles.container}>
@@ -19,10 +20,7 @@ const RequestSent = () => {
         onPress={() => navigate('Login')}
         underlayColor="#fff">
         <Text style={styles.loginText}>OK</Text>
-        <Image
-          style={styles.arrowRight}
-          source={require('../../assets/images/arrowright-black.png')}
-        />
+        <Icon name="chevron-forward-outline" style={styles.arrowRight} />
       </TouchableOpacity>
     </View>
   );
@@ -47,6 +45,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontStyle: 'italic',
     marginTop: 60,
+    fontFamily: 'Lato-Regular',
+    textTransform: 'capitalize',
   },
   mainCar: {
     width: 390,
@@ -60,10 +60,12 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '300',
     marginTop: 40,
-    color: '#333',
+    color: theme.BLACK_COLOR,
     textAlign: 'center',
     paddingLeft: 20,
     paddingRight: 20,
+    textTransform: 'capitalize',
+    fontFamily: 'Lato-Regular',
   },
   nextButton: {
     marginTop: 26,
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
     color: theme.BLACK_COLOR,
   },
   arrowRight: {
-    width: 18,
-    height: 18,
+    fontSize: 20,
+    color: theme.BLACK_COLOR,
   },
 });

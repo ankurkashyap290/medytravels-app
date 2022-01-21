@@ -52,11 +52,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   headingText: {
-    color: theme.APP_BACKGROUND,
+    color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 20,
+    fontFamily: 'Lato-Regular',
+    textTransform: 'capitalize',
   },
   innerBox: {
     backgroundColor: theme.APP_BACKGROUND,
@@ -70,6 +72,8 @@ const styles = StyleSheet.create({
   },
   radioButtons: {
     fontSize: theme.FONT_SIZE_MEDIUM,
+    marginBottom: 20,
+    color: theme.PRIMARY_COLOR,
   },
   buttonText: {
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -79,13 +83,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   nextButton: {
-    marginTop: 15,
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 12,
     paddingBottom: 12,
-    borderRadius: 100,
-    backgroundColor: '#111',
-    width: 200,
+    borderRadius: 10,
+    backgroundColor: theme.BLACK_COLOR,
+    width: 265,
+    fontFamily: 'Lato-thin',
   },
 });

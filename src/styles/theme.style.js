@@ -1,7 +1,7 @@
 import {DefaultTheme} from 'react-native-paper';
-// const darkBlue = "#0065AB";
-const primaryColor = '#ffc100';
-const secondaryColor = '#ffa800';
+// const darkBlue = "#ffca2f";
+const primaryColor = '#ffca2f';
+const secondaryColor = '#ffb83d';
 
 // const infoColor = "#61C2FF";
 // const brightGreen = "#1DFF00";
@@ -33,37 +33,37 @@ const theme = {
   fonts: {
     ios: {
       regular: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Regular',
         fontWeight: '400',
       },
       medium: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Bold',
         fontWeight: '500',
       },
       light: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Light',
         fontWeight: '300',
       },
       thin: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Thin',
         fontWeight: '100',
       },
     },
     default: {
       regular: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Regular',
         fontWeight: '400',
       },
       medium: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Bold',
         fontWeight: '500',
       },
       light: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Light',
         fontWeight: '300',
       },
       thin: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Lato-Thin',
         fontWeight: '100',
       },
     },
@@ -75,7 +75,7 @@ export default {
   FONT_SIZE_SMALL: 14,
   FONT_SIZE_MEDIUM: 16,
   FONT_SIZE_MEDIUM_OVER: 18,
-  FONT_SIZE_LARGE: 24,
+  FONT_SIZE_LARGE: 20,
   FONT_SIZE_EXTRA_LARGE: 30,
   PRIMARY_COLOR: primaryColor,
   SECONDARY_COLOR: secondaryColor,

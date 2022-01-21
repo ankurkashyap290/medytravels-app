@@ -8,16 +8,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import theme from '../styles/theme.style';
+import Icon from 'react-native-vector-icons/Ionicons';
 const SearchLocation = () => {
   return (
     <View style={styles.container}>
       <View style={styles.innerBox}>
         <View style={styles.layout}>
           <TouchableOpacity style={styles.backButton}>
-            <Image
-              style={styles.tinyLogo}
-              source={require('../../assets/images/back.png')}
-            />
+            <Icon name="chevron-back-outline" style={styles.arrowRight} />
           </TouchableOpacity>
           <TextInput
             style={styles.textInput}
@@ -26,15 +24,10 @@ const SearchLocation = () => {
           />
         </View>
         <TouchableOpacity style={styles.searchLocation}>
-          <Image
-            style={styles.LocationIcon}
-            source={require('../../assets/images/loaction.png')}
-          />
+          <Icon name="map-marker" style={styles.arrowRight} />
+
           <Text style={styles.searchHeading}>Use current Location</Text>
-          <Image
-            style={styles.tinyLogo}
-            source={require('../../assets/images/next.png')}
-          />
+          <Icon name="chevron-forward-outline" style={styles.arrowRight} />
         </TouchableOpacity>
       </View>
     </View>
@@ -45,8 +38,8 @@ export default SearchLocation;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
+    // paddingLeft: 20,
+    // paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
@@ -55,17 +48,19 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   innerBox: {
-    width: 326,
     backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
-    paddingLeft: 20,
-    paddingRight: 20,
+    overflow: 'hidden',
+    paddingLeft: 15,
+    paddingRight: 15,
     paddingTop: 20,
     paddingBottom: 20,
+    textAlign: 'center',
+    // width: 300,
   },
   layout: {
     backgroundColor: '#eee',
-    borderRadius: 100,
+    borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center',
     paddingLeft: 15,
@@ -78,7 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
     paddingLeft: 20,
     paddingRight: 20,
-    borderRadius: 100,
+    borderRadius: 10,
   },
   backButton: {
     width: 30,
@@ -86,13 +81,10 @@ const styles = StyleSheet.create({
     backgroundColor: theme.SECONDARY_COLOR,
     borderRadius: 100,
     textAlign: 'center',
-    paddingLeft: 8,
-    paddingTop: 8,
+    paddingLeft: 4,
+    paddingTop: 4,
   },
-  tinyLogo: {
-    width: 15,
-    height: 15,
-  },
+
   LocationIcon: {
     width: 25,
     height: 25,
@@ -109,5 +101,9 @@ const styles = StyleSheet.create({
   searchHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#000',
+  },
+  arrowRight: {
+    fontSize: 20,
+    color: theme.BLACK_COLOR,
   },
 });

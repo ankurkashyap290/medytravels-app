@@ -10,6 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 import theme from '../styles/theme.style';
+import Icon from 'react-native-vector-icons/Ionicons';
 const VehiclesFullList = () => {
   return (
     <SafeAreaView>
@@ -17,10 +18,7 @@ const VehiclesFullList = () => {
         <View style={styles.container}>
           <View style={styles.layout}>
             <TouchableOpacity style={styles.backButton}>
-              <Image
-                style={styles.tinyLogo}
-                source={require('../../assets/images/back.png')}
-              />
+              <Icon name="chevron-back-outline" style={styles.arrowRight} />
             </TouchableOpacity>
             <View>
               <Text style={styles.locationHeading}>
@@ -31,10 +29,7 @@ const VehiclesFullList = () => {
           </View>
           <View style={styles.filterLayout}>
             <View style={styles.filterIconOuter}>
-              <Image
-                style={styles.filterIcon}
-                source={require('../../assets/images/person.png')}
-              />
+              <Icon name="ios-walk-sharp" size={30} color="#fff" />
             </View>
             <View style={styles.filterTextBox}>
               <Text style={styles.filterHeading}>
@@ -46,10 +41,7 @@ const VehiclesFullList = () => {
 
           <View style={styles.filterLayout}>
             <View style={styles.filterIconOuterOrg}>
-              <Image
-                style={styles.filterIcon}
-                source={require('../../assets/images/person.png')}
-              />
+              <Icon name="ios-walk-sharp" size={30} color="#fff" />
             </View>
             <View style={styles.filterTextBox}>
               <Text style={styles.filterHeading}>Nagrota bagwan bus stand</Text>
@@ -132,9 +124,11 @@ const VehiclesFullList = () => {
               <Text style={styles.petText}>No Pets</Text>
             </View>
             <View style={styles.petIconBox}>
-              <Image
+              <Icon
+                name="car-sport"
+                size={30}
+                color="#000"
                 style={styles.petIcon}
-                source={require('../../assets/images/car.png')}
               />
               <Text style={styles.petText}>MARUTI SWIFT DZIRE (Dark grey)</Text>
             </View>
@@ -171,7 +165,7 @@ const VehiclesFullList = () => {
           <TouchableOpacity style={styles.alertBox}>
             <Text style={styles.alertText}> Report ride</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.alertBox}>
+          <TouchableOpacity style={styles.alertBox2}>
             <Text style={styles.alertText}>Continue</Text>
           </TouchableOpacity>
         </View>
@@ -205,7 +199,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   layout: {
-    backgroundColor: '#eee',
+    backgroundColor: theme.WHITE_COLOR,
     borderRadius: 20,
     flexDirection: 'row',
     alignItems: 'center',
@@ -221,8 +215,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.SECONDARY_COLOR,
     borderRadius: 100,
     textAlign: 'center',
-    paddingLeft: 8,
-    paddingTop: 8,
+    paddingLeft: 5,
+    paddingTop: 4,
     marginRight: 10,
   },
   tinyLogo: {
@@ -245,7 +239,7 @@ const styles = StyleSheet.create({
   locationHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#000',
-    fontWeight: '600',
+    fontFamily: 'Lato-Bold',
   },
   locationSubLine: {
     fontSize: theme.FONT_SIZE_SMALL,
@@ -268,27 +262,28 @@ const styles = StyleSheet.create({
   filterHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: theme.APP_BACKGROUND,
-    fontWeight: '600',
+    fontFamily: 'Lato-Bold',
   },
   FilterPara: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.APP_BACKGROUND,
+    fontFamily: 'Lato-Regular',
   },
   filterIconOuter: {
     backgroundColor: '#82c91e',
     width: 40,
     height: 40,
     borderRadius: 100,
-    paddingLeft: 14,
-    paddingTop: 6,
+    paddingLeft: 6,
+    paddingTop: 3,
   },
   filterIconOuterOrg: {
     backgroundColor: '#D8781B',
     width: 40,
     height: 40,
     borderRadius: 100,
-    paddingLeft: 14,
-    paddingTop: 6,
+    paddingLeft: 6,
+    paddingTop: 3,
   },
   filterIcon: {
     width: 10,
@@ -312,7 +307,7 @@ const styles = StyleSheet.create({
   avtarHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: '#0077b6',
-    fontWeight: '800',
+    fontFamily: 'Lato-Bold',
     marginBottom: 5,
   },
   avtarStars: {
@@ -326,7 +321,7 @@ const styles = StyleSheet.create({
   rateText: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: '#000',
-    fontWeight: '900',
+    fontFamily: 'Lato-Bold',
     marginBottom: 5,
     marginBottom: 10,
   },
@@ -343,10 +338,11 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: theme.FONT_SIZE_MEDIUM,
     marginBottom: 10,
+    fontFamily: 'Lato-Bold',
   },
   timeSubHeading: {
     color: theme.SECONDARY_COLOR,
-    fontWeight: '900',
+    fontFamily: 'Lato-Bold',
     fontSize: theme.FONT_SIZE_MEDIUM,
     marginBottom: 10,
   },
@@ -374,7 +370,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D8781B',
     width: 30,
     height: 30,
-    borderRadius: 100,
+    borderRadius: 10,
     paddingLeft: 10,
     paddingTop: 4,
   },
@@ -385,7 +381,7 @@ const styles = StyleSheet.create({
   timeAp: {
     color: theme.SECONDARY_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: '800',
+    fontFamily: 'Lato-Bold',
   },
   ClickText: {
     backgroundColor: '#82c91e',
@@ -393,19 +389,26 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     borderRadius: 20,
+    fontFamily: 'Lato-Regular',
     padding: 10,
     marginTop: 15,
   },
   alertBox: {
+    backgroundColor: theme.BLACK_COLOR,
+    marginTop: 20,
+    marginBottom: 10,
+    borderRadius: 10,
+  },
+  alertBox2: {
     backgroundColor: '#82c91e',
     marginTop: 20,
     marginBottom: 10,
-    borderRadius: 20,
+    borderRadius: 10,
   },
   alertText: {
     color: theme.APP_BACKGROUND,
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
-    fontWeight: '600',
+    fontFamily: 'Lato-Regular',
     textAlign: 'center',
     padding: 10,
   },
@@ -423,6 +426,7 @@ const styles = StyleSheet.create({
   petText: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#000',
+    fontFamily: 'Lato-Regular',
   },
   smokingBox: {
     borderBottomWidth: 1,
@@ -434,11 +438,12 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#999',
     marginBottom: 6,
+    fontFamily: 'Lato-Regular',
   },
   PassHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
-    fontWeight: '800',
     color: '#000',
+    fontFamily: 'Lato-Bold',
   },
   passIconBox: {
     width: 40,
@@ -451,5 +456,9 @@ const styles = StyleSheet.create({
   passIcon: {
     width: 40,
     height: 40,
+  },
+  arrowRight: {
+    fontSize: 20,
+    color: theme.BLACK_COLOR,
   },
 });

@@ -10,16 +10,14 @@ import {
   ScrollView,
 } from 'react-native';
 import theme from '../styles/theme.style';
+import Icon from 'react-native-vector-icons/Ionicons';
 const ListVehicles = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.conGap}>
         <View style={styles.layout}>
           <TouchableOpacity style={styles.backButton}>
-            <Image
-              style={styles.tinyLogo}
-              source={require('../../assets/images/back.png')}
-            />
+            <Icon name="chevron-back-outline" style={styles.arrowRight} />
           </TouchableOpacity>
           <View>
             <Text style={styles.locationHeading}>
@@ -30,10 +28,7 @@ const ListVehicles = () => {
         </View>
         <View style={styles.filterLayout}>
           <View style={styles.filterIconOuter}>
-            <Image
-              style={styles.filterIcon}
-              source={require('../../assets/images/person.png')}
-            />
+            <Icon name="ios-walk-sharp" size={30} color="#fff" />
           </View>
           <View style={styles.filterTextBox}>
             <Text style={styles.filterHeading}>Leave and arrive closer</Text>
@@ -88,22 +83,13 @@ const ListVehicles = () => {
 
               <View style={styles.personNumbers}>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPersonOrgan}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
               </View>
             </View>
@@ -116,22 +102,13 @@ const ListVehicles = () => {
               <Text style={styles.timeSubHeading}>Shahpur</Text>
               <View style={styles.personNumbers}>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPersonNo}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
               </View>
             </View>
@@ -183,22 +160,13 @@ const ListVehicles = () => {
 
               <View style={styles.personNumbers}>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPersonOrgan}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
               </View>
             </View>
@@ -211,22 +179,13 @@ const ListVehicles = () => {
               <Text style={styles.timeSubHeading}>Shahpur</Text>
               <View style={styles.personNumbers}>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPerson}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
                 <View style={styles.numberPersonNo}>
-                  <Image
-                    style={styles.seatIcon}
-                    source={require('../../assets/images/person.png')}
-                  />
+                  <Icon name="ios-walk-sharp" size={20} color="#fff" />
                 </View>
               </View>
             </View>
@@ -268,7 +227,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   layout: {
-    backgroundColor: '#eee',
+    backgroundColor: theme.WHITE_COLOR,
     borderRadius: 20,
     flexDirection: 'row',
     alignItems: 'center',
@@ -284,8 +243,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.SECONDARY_COLOR,
     borderRadius: 100,
     textAlign: 'center',
-    paddingLeft: 8,
-    paddingTop: 8,
+    paddingLeft: 4,
+    paddingTop: 4,
     marginRight: 10,
   },
   tinyLogo: {
@@ -307,12 +266,13 @@ const styles = StyleSheet.create({
   },
   locationHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: '#000',
-    fontWeight: '600',
+    color: theme.BLACK_COLOR,
+    fontFamily: 'Lato-Bold',
   },
   locationSubLine: {
     fontSize: theme.FONT_SIZE_SMALL,
-    color: '#000',
+    color: theme.BLACK_COLOR,
+    fontFamily: 'Lato-Regular',
   },
   filterLayout: {
     backgroundColor: theme.SECONDARY_COLOR,
@@ -331,19 +291,20 @@ const styles = StyleSheet.create({
   filterHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: theme.APP_BACKGROUND,
-    fontWeight: '600',
+    fontFamily: 'Lato-Bold',
   },
   FilterPara: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.APP_BACKGROUND,
+    fontFamily: 'Lato-Regular',
   },
   filterIconOuter: {
     backgroundColor: '#82c91e',
     width: 40,
     height: 40,
     borderRadius: 100,
-    paddingLeft: 14,
-    paddingTop: 6,
+    paddingLeft: 6,
+    paddingTop: 3,
   },
   filterIcon: {
     width: 10,
@@ -367,7 +328,7 @@ const styles = StyleSheet.create({
   avtarHeading: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: '#0077b6',
-    fontWeight: '800',
+    fontFamily: 'Lato-Bold',
     marginBottom: 5,
   },
   avtarStars: {
@@ -381,7 +342,7 @@ const styles = StyleSheet.create({
   rateText: {
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
     color: '#000',
-    fontWeight: '900',
+    fontFamily: 'Lato-Bold',
     marginBottom: 5,
   },
   timeLayout: {
@@ -400,7 +361,7 @@ const styles = StyleSheet.create({
   },
   timeSubHeading: {
     color: theme.SECONDARY_COLOR,
-    fontWeight: '900',
+    fontFamily: 'Lato-Regular',
     fontSize: theme.FONT_SIZE_MEDIUM,
     marginBottom: 10,
   },
@@ -413,7 +374,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 100,
-    paddingLeft: 10,
+    paddingLeft: 5,
     paddingTop: 4,
   },
   numberPersonNo: {
@@ -421,15 +382,15 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 100,
-    paddingLeft: 10,
+    paddingLeft: 5,
     paddingTop: 4,
   },
   numberPersonOrgan: {
-    backgroundColor: '#D8781B',
+    backgroundColor: '#F7A73E',
     width: 30,
     height: 30,
     borderRadius: 100,
-    paddingLeft: 10,
+    paddingLeft: 5,
     paddingTop: 4,
   },
   seatIcon: {
@@ -439,28 +400,33 @@ const styles = StyleSheet.create({
   timeAp: {
     color: theme.SECONDARY_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: '800',
+    fontFamily: 'Lato-Regular',
   },
   ClickText: {
-    backgroundColor: '#82c91e',
+    backgroundColor: theme.PRIMARY_COLOR,
     color: theme.APP_BACKGROUND,
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM_OVER,
-    borderRadius: 20,
+    borderRadius: 10,
     padding: 10,
+    fontFamily: 'Lato-Regular',
     marginTop: 15,
   },
   alertBox: {
-    backgroundColor: theme.APP_BACKGROUND,
+    backgroundColor: theme.BLACK_COLOR,
     marginTop: 20,
     marginBottom: 100,
-    borderRadius: 20,
+    borderRadius: 10,
   },
   alertText: {
-    color: '#000',
+    color: theme.WHITE_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: '600',
     textAlign: 'center',
-    padding: 10,
+    padding: 13,
+    fontFamily: 'Lato-Regular',
+  },
+  arrowRight: {
+    fontSize: 20,
+    color: theme.BLACK_COLOR,
   },
 });

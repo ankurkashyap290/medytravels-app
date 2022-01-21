@@ -12,12 +12,15 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.WHITE_COLOR,
   },
   logo: {
-    fontSize: theme.FONT_SIZE_EXTRA_LARGE,
-    fontWeight: '900',
-    color: theme.BLACK_COLOR,
-    textAlign: 'center',
-    fontStyle: 'italic',
+    width: 200,
+    height: 200,
     marginTop: 60,
+    padding: 10,
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
+    alignSelf: 'stretch',
   },
   mainCar: {
     width: 390,
@@ -28,13 +31,15 @@ export const styles = StyleSheet.create({
     height: 320,
   },
   tagLine: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: '400',
     marginTop: 40,
     color: '#333',
     textAlign: 'center',
     paddingLeft: 20,
     paddingRight: 20,
+    fontFamily: 'Lato-Regular',
+    textTransform: 'capitalize',
   },
   nextButton: {
     marginTop: 26,
@@ -53,12 +58,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   loginText: {
-    paddingRight: 0,
-    fontSize: 20,
-    color: theme.BLACK_COLOR,
+    // paddingRight: 0,
+    // fontSize: 20,
+    // color: theme.BLACK_COLOR,
   },
   arrowRight: {
-    width: 25,
-    height: 25,
+    fontSize: 36,
+    color: theme.BLACK_COLOR,
   },
 });

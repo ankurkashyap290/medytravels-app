@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <View style={styles.outerBox}>
-        <Text style={styles.headingText}>Log In</Text>
+        <Text style={styles.headingText}>LogIn</Text>
 
         <View style={styles.innerBox}>
           <Text style={styles.tagline}>Lets' login to your account</Text>
@@ -61,21 +61,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   headingText: {
-    color: theme.APP_BACKGROUND,
+    color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 20,
+    fontFamily: 'Lato-Regular',
+    textTransform: 'capitalize',
   },
   innerBox: {
     backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
     overflow: 'hidden',
-    paddingLeft: 40,
-    paddingRight: 40,
+    paddingLeft: 15,
+    paddingRight: 15,
     paddingTop: 20,
     paddingBottom: 20,
     textAlign: 'center',
+    width: 300,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -83,6 +86,9 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',
+    fontFamily: 'Lato-thin',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   textInput: {
     color: theme.APP_BACKGROUND,
@@ -92,21 +98,23 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingTop: 10,
     paddingBottom: 10,
-    borderRadius: 100,
+    borderRadius: 10,
     marginBottom: 15,
+    width: '100%',
   },
   SubmitButtonStyle: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 12,
     paddingBottom: 12,
-    borderRadius: 100,
+    borderRadius: 10,
     backgroundColor: theme.SECONDARY_COLOR,
   },
   TextStyle: {
     textAlign: 'center',
     color: theme.APP_BACKGROUND,
     fontSize: theme.FONT_SIZE_MEDIUM,
+    fontFamily: 'Lato-thin',
   },
   lastLInks: {
     marginTop: 20,
@@ -120,14 +128,16 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',
+    fontFamily: 'Lato-thin',
   },
   goLoginButton: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 12,
     paddingBottom: 12,
-    borderRadius: 100,
-    backgroundColor: '#111',
-    width: 200,
+    borderRadius: 10,
+    backgroundColor: theme.BLACK_COLOR,
+    width: 265,
+    fontFamily: 'Lato-thin',
   },
 });
