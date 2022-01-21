@@ -30,7 +30,7 @@ const App = () => {
       {/* <Provider store={store}> */}
       {/* <SafeAreaProvider> */}
       <PaperProvider theme={theme.DEFAULT_THEME}>
-        {/* <Welcome /> */}
+        <Welcome />
         {/* <Login /> */}
         {/* <SignUp /> */}
         {/* <RiderOrDriver /> */}
@@ -44,7 +44,7 @@ const App = () => {
         {/* <SearchLocation /> */}
         {/* <ListVehicles /> */}
         {/* <VehiclesFullList /> */}
-        <RequestSent />
+        {/* <RequestSent /> */}
       </PaperProvider>
     </>
 

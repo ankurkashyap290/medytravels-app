@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   logoImage: {
     width: '100%',
     height: '100%',
-    alignSelf: 'stretch',
+    resizeMode: 'contain',
   },
   mainCar: {
     width: 390,
