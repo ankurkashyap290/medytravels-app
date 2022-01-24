@@ -15,10 +15,10 @@ const Welcome = () => {
       <View style={styles.mainCar}>
         <Image
           style={styles.tinyLogo}
-          source={require('../../assets/images/welcome.png')}
+          source={require('../../assets/images/Navigation-rafiki.png')}
         />
       </View>
-      <Text style={styles.tagLine}>Your pick of rides at low prices</Text>
+      {/* <Text style={styles.tagLine}>Your pick of rides at low prices</Text> */}
       <TouchableOpacity
         style={styles.nextButton}
         onPress={() => NavigationService.navigate('Login')}

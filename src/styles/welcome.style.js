@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.WHITE_COLOR,
   },
   logo: {
-    width: 200,
-    height: 200,
+    width: 140,
+    height: 140,
     marginTop: 60,
     padding: 10,
   },
@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
   mainCar: {
     width: 390,
     overflow: 'hidden',
+    marginBottom: 80,
   },
   tinyLogo: {
     width: 390,

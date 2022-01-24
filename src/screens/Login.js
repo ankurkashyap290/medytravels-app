@@ -5,17 +5,24 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import theme from '../styles/theme.style';
+
+// const image = {uri: '../../assets/images/avtar.png'};
 const Login = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>LogIn</Text>
 
         <View style={styles.innerBox}>
-          <Text style={styles.tagline}>Lets' login to your account</Text>
-          <View>
+          <View style={styles.whiteBgBox}>
+            <Text style={styles.tagline}>Lets' login to your account</Text>
             <TextInput
               style={styles.textInput}
               placeholder="User Name"
@@ -27,18 +34,18 @@ const Login = () => {
               placeholder="Password"
               placeholderTextColor="#000"
             />
-
-            <TouchableOpacity style={styles.SubmitButtonStyle}>
-              <Text style={styles.TextStyle}> LogIn </Text>
-            </TouchableOpacity>
           </View>
-        </View>
-        <View style={styles.lastLInks}>
+          <TouchableOpacity style={styles.SubmitButtonStyle}>
+            <Text style={styles.TextStyle}> LogIn </Text>
+          </TouchableOpacity>
           <Text style={styles.already}>Don't have an account ?</Text>
           <TouchableOpacity style={styles.goLoginButton}>
             <Text style={styles.TextStyle}> Sing Up </Text>
           </TouchableOpacity>
         </View>
+        {/* <View style={styles.lastLInks}>
+        
+        </View> */}
       </View>
     </View>
   );
@@ -48,44 +55,56 @@ export default Login;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: theme.PRIMARY_COLOR,
+    backgroundColor: '#FFC100',
     alignContent: 'center',
     flex: 1,
   },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
+  },
   outerBox: {
     textAlign: 'center',
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   headingText: {
     color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
-    fontFamily: 'Lato-Regular',
+    marginBottom: 30,
+    fontFamily: 'Lato-Bold',
+    fontWeight: '900',
     textTransform: 'capitalize',
   },
   innerBox: {
-    backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
-    overflow: 'hidden',
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center',
     width: 300,
+  },
+  whiteBgBox: {
+    backgroundColor: theme.APP_BACKGROUND,
+    overflow: 'hidden',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
+    textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.SECONDARY_COLOR,
+    color: 'black',
     marginBottom: 15,
     fontWeight: '600',
-    fontStyle: 'italic',
+    // fontStyle: 'italic',
     fontFamily: 'Lato-thin',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -99,8 +118,9 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     borderRadius: 10,
-    marginBottom: 15,
+    marginBottom: 10,
     width: '100%',
+    textAlign: 'center',
   },
   SubmitButtonStyle: {
     paddingLeft: 20,
@@ -108,7 +128,7 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 10,
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',
@@ -124,11 +144,13 @@ const styles = StyleSheet.create({
   },
   already: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.APP_BACKGROUND,
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
+    marginTop: 15,
     fontWeight: '600',
     fontStyle: 'italic',
     fontFamily: 'Lato-thin',
+    textAlign: 'center',
   },
   goLoginButton: {
     paddingLeft: 20,
@@ -137,7 +159,7 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     borderRadius: 10,
     backgroundColor: theme.BLACK_COLOR,
-    width: 265,
+    // width: 265,
     fontFamily: 'Lato-thin',
   },
 });
