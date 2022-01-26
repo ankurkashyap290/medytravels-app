@@ -12,6 +12,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const SearchLocation = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.innerBox}>
         <View style={styles.layout}>
           <TouchableOpacity style={styles.backButton}>
@@ -46,6 +50,14 @@ const styles = StyleSheet.create({
     backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
+  },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
   },
   innerBox: {
     backgroundColor: theme.APP_BACKGROUND,

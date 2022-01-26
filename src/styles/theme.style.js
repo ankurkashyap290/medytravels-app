@@ -1,6 +1,6 @@
 import {DefaultTheme} from 'react-native-paper';
 // const darkBlue = "#ffca2f";
-const primaryColor = '#ffca2f';
+const primaryColor = '#FFC100';
 const secondaryColor = '#ffb83d';
 
 // const infoColor = "#61C2FF";

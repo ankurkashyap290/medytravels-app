@@ -5,31 +5,36 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  SafeAreaView,
-  ScrollView,
+  Image,
 } from 'react-native';
 import theme from '../styles/theme.style';
 const ForgotPassword = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>Reset Password</Text>
         <View style={styles.innerBox}>
-          <Text style={styles.tagline}>
-            Enter the email associated with your account and we'll send an email
-            with instructions to reset your password.
-          </Text>
-          <View>
-            <TextInput
-              style={styles.textInput}
-              placeholder="Enter Your Email"
-              placeholderTextColor="#000"
-            />
+          <View style={styles.whiteBgBox}>
+            <Text style={styles.tagline}>
+              Enter the email associated with your account and we'll send an
+              email with instructions to reset your password.
+            </Text>
+            <View>
+              <TextInput
+                style={styles.textInput}
+                placeholder="Enter Your Email"
+                placeholderTextColor="#000"
+              />
+            </View>
           </View>
-          <TouchableOpacity style={styles.SubmitButtonStyle}>
-            <Text style={styles.TextStyle}> Send instructions </Text>
-          </TouchableOpacity>
         </View>
+        <TouchableOpacity style={styles.SubmitButtonStyle}>
+          <Text style={styles.TextStyle}> Send instructions </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -39,14 +44,20 @@ export default ForgotPassword;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
+  },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
   },
   outerBox: {
     textAlign: 'center',
@@ -56,29 +67,35 @@ const styles = StyleSheet.create({
   headingText: {
     color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
-    fontFamily: 'Lato-Regular',
+    marginBottom: 30,
+    fontFamily: 'Lato-Bold',
+    fontWeight: '900',
     textTransform: 'capitalize',
   },
   innerBox: {
+    width: 300,
+  },
+  whiteBgBox: {
     backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
     overflow: 'hidden',
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
     textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
+  },
+  innerBox: {
     width: 300,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.SECONDARY_COLOR,
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
     fontWeight: '600',
-    fontStyle: 'italic',
     fontFamily: 'Lato-thin',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -102,7 +119,7 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 10,
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',

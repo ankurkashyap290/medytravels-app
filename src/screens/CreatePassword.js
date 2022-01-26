@@ -5,20 +5,23 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  SafeAreaView,
-  ScrollView,
+  Image,
 } from 'react-native';
 import theme from '../styles/theme.style';
 const CreatePassword = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>Create Password</Text>
         <View style={styles.innerBox}>
-          <Text style={styles.tagline}>
-            Your new password must be different from pervious used password.
-          </Text>
-          <View>
+          <View style={styles.whiteBgBox}>
+            <Text style={styles.tagline}>
+              Your new password must be different from pervious used password.
+            </Text>
             <TextInput
               style={styles.textInput}
               placeholder="Password"
@@ -49,14 +52,20 @@ export default CreatePassword;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
+  },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
   },
   outerBox: {
     textAlign: 'center',
@@ -73,22 +82,25 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
   },
   innerBox: {
-    backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
-    overflow: 'hidden',
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center',
     width: 300,
+  },
+  whiteBgBox: {
+    backgroundColor: theme.APP_BACKGROUND,
+    overflow: 'hidden',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
+    textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.SECONDARY_COLOR,
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
     fontWeight: '600',
-    fontStyle: 'italic',
     fontFamily: 'Lato-thin',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -120,19 +132,12 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 10,
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',
     color: theme.APP_BACKGROUND,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontFamily: 'Lato-thin',
-  },
-
-  lastLInks: {
-    marginTop: 20,
-    flex: 0,
-    alignItems: 'center',
-    textAlign: 'center',
   },
 });

@@ -7,17 +7,23 @@ import {
   TouchableOpacity,
   SafeAreaView,
   ScrollView,
+  Image,
 } from 'react-native';
 import theme from '../styles/theme.style';
 export default function DriverInfo() {
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <ScrollView style={styles.scrollView}>
         <View style={styles.outerBox}>
           <Text style={styles.headingText}>Driver Info</Text>
           <View style={styles.innerBox}>
-            <Text style={styles.tagline}>Please fill out this field</Text>
-            <View>
+            <View style={styles.whiteBgBox}>
+              <Text style={styles.tagline}>Please fill out this field</Text>
+
               <TextInput
                 style={styles.textInput}
                 placeholder="Full Name"
@@ -70,11 +76,10 @@ export default function DriverInfo() {
                 placeholder="Confirm Password"
                 placeholderTextColor="#000"
               />
-
-              <TouchableOpacity style={styles.SubmitButtonStyle}>
-                <Text style={styles.TextStyle}> Next </Text>
-              </TouchableOpacity>
             </View>
+            <TouchableOpacity style={styles.SubmitButtonStyle}>
+              <Text style={styles.TextStyle}> Next </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -84,8 +89,6 @@ export default function DriverInfo() {
 
 const styles = StyleSheet.create({
   container: {
-    // paddingLeft: 20,
-    // paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
@@ -93,34 +96,48 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flex: 1,
   },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
+  },
   outerBox: {
     textAlign: 'center',
-    paddingTop: 40,
-    paddingBottom: 40,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   headingText: {
     color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
-    fontFamily: 'Lato-Regular',
+    marginBottom: 30,
+    fontFamily: 'Lato-Bold',
+    fontWeight: '900',
     textTransform: 'capitalize',
   },
   innerBox: {
-    backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
-    overflow: 'hidden',
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center',
     width: 300,
+  },
+  whiteBgBox: {
+    backgroundColor: theme.APP_BACKGROUND,
+    overflow: 'hidden',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
+    textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.SECONDARY_COLOR,
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',
@@ -146,7 +163,7 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 10,
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',

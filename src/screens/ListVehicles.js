@@ -14,6 +14,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const ListVehicles = () => {
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <ScrollView style={styles.conGap}>
         <View style={styles.layout}>
           <TouchableOpacity style={styles.backButton}>
@@ -210,6 +214,14 @@ const styles = StyleSheet.create({
     backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
+  },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
   },
   conGap: {
     paddingLeft: 20,

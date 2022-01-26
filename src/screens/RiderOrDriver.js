@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import RadioForm, {
   RadioButton,
   RadioButtonInput,
@@ -14,18 +14,24 @@ var radio_props = [
 const RiderOrDriver = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>Please select any</Text>
         <View style={styles.innerBox}>
-          <RadioForm
-            style={styles.radioButtons}
-            radio_props={radio_props}
-            initial={0}
-            buttonSize={16}
-            onPress={value => {
-              this.setState({value: value});
-            }}
-          />
+          <View style={styles.whiteBgBox}>
+            <RadioForm
+              style={styles.radioButtons}
+              radio_props={radio_props}
+              initial={0}
+              buttonSize={16}
+              onPress={value => {
+                this.setState({value: value});
+              }}
+            />
+          </View>
           <TouchableOpacity style={styles.nextButton}>
             <Text style={styles.buttonText}> Next </Text>
           </TouchableOpacity>
@@ -39,8 +45,6 @@ export default RiderOrDriver;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
@@ -48,32 +52,49 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flex: 1,
   },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
+  },
   outerBox: {
     textAlign: 'center',
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   headingText: {
     color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
-    fontFamily: 'Lato-Regular',
+    marginBottom: 30,
+    fontFamily: 'Lato-Bold',
+    fontWeight: '900',
     textTransform: 'capitalize',
   },
   innerBox: {
+    width: 300,
+  },
+  whiteBgBox: {
     backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
     overflow: 'hidden',
-    paddingLeft: 40,
-    paddingRight: 40,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
     textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
   },
   radioButtons: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     marginBottom: 20,
     color: theme.PRIMARY_COLOR,
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   buttonText: {
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -89,7 +110,6 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     borderRadius: 10,
     backgroundColor: theme.BLACK_COLOR,
-    width: 265,
     fontFamily: 'Lato-thin',
   },
 });

@@ -1,30 +1,29 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  SafeAreaView,
-  ScrollView,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import theme from '../styles/theme.style';
 const CheckEmail = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>Check Your Email</Text>
         <View style={styles.innerBox}>
-          <Text style={styles.tagline}>
-            We have sent a password recover instructions to your email.
-          </Text>
+          <View style={styles.whiteBgBox}>
+            <Text style={styles.tagline}>
+              We have sent a password recover instructions to your email.
+            </Text>
+
+            <Text style={styles.anotherEmail}>
+              Did not receive the email? Check your spam filter, or try another
+              email address
+            </Text>
+          </View>
           <TouchableOpacity style={styles.SubmitButtonStyle}>
             <Text style={styles.TextStyle}> Open Email App</Text>
           </TouchableOpacity>
-          <Text style={styles.anotherEmail}>
-            Did not receive the email? Check your spam filter, or try another
-            email address
-          </Text>
         </View>
       </View>
     </View>
@@ -35,14 +34,20 @@ export default CheckEmail;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
+  },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
   },
   outerBox: {
     textAlign: 'center',
@@ -59,19 +64,23 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
   },
   innerBox: {
-    backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
-    overflow: 'hidden',
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center',
     width: 300,
+  },
+  whiteBgBox: {
+    backgroundColor: theme.APP_BACKGROUND,
+    overflow: 'hidden',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
+    textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.SECONDARY_COLOR,
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
     fontWeight: '600',
     fontStyle: 'italic',
@@ -82,7 +91,7 @@ const styles = StyleSheet.create({
   },
   anotherEmail: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: '#000',
+    color: theme.SECONDARY_COLOR,
     fontWeight: '600',
     fontStyle: 'italic',
     textAlign: 'center',
@@ -96,7 +105,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 15,
     marginTop: 15,
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',

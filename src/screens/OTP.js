@@ -5,40 +5,45 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  SafeAreaView,
-  ScrollView,
+  Image,
 } from 'react-native';
 import theme from '../styles/theme.style';
 const OTP = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>
           Verify your code sent to your contact number
         </Text>
         <View style={styles.innerBox}>
-          <Text style={styles.tagline}>Please enter your code below</Text>
-          <View style={styles.innerCode}>
-            <TextInput
-              style={styles.textInput}
-              placeholder="0"
-              placeholderTextColor="#000"
-            />
-            <TextInput
-              style={styles.textInput}
-              placeholder="0"
-              placeholderTextColor="#000"
-            />
-            <TextInput
-              style={styles.textInput}
-              placeholder="0"
-              placeholderTextColor="#000"
-            />
-            <TextInput
-              style={styles.textInput}
-              placeholder="0"
-              placeholderTextColor="#000"
-            />
+          <View style={styles.whiteBgBox}>
+            <Text style={styles.tagline}>Please enter your code below</Text>
+            <View style={styles.innerCode}>
+              <TextInput
+                style={styles.textInput}
+                placeholder="0"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                placeholder="0"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                placeholder="0"
+                placeholderTextColor="#000"
+              />
+              <TextInput
+                style={styles.textInput}
+                placeholder="0"
+                placeholderTextColor="#000"
+              />
+            </View>
           </View>
           <TouchableOpacity style={styles.SubmitButtonStyle}>
             <Text style={styles.TextStyle}> Submit Code </Text>
@@ -56,8 +61,6 @@ export default OTP;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
@@ -65,39 +68,49 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flex: 1,
   },
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
+  },
   outerBox: {
     textAlign: 'center',
-    paddingTop: 40,
-    paddingBottom: 40,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   headingText: {
     color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
-    fontFamily: 'Lato-Regular',
+    marginBottom: 30,
+    fontFamily: 'Lato-Bold',
+    fontWeight: '900',
+    width: 300,
     textTransform: 'capitalize',
   },
   innerBox: {
-    backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
-    overflow: 'hidden',
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center',
     width: 300,
-    marginLeft: 'auto',
-    marginRight: 'auto',
+  },
+  whiteBgBox: {
+    backgroundColor: theme.APP_BACKGROUND,
+    overflow: 'hidden',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
+    textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.SECONDARY_COLOR,
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
     fontWeight: '600',
-    fontStyle: 'italic',
     fontFamily: 'Lato-thin',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -119,7 +132,8 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 10,
-    backgroundColor: theme.SECONDARY_COLOR,
+    marginBottom: 15,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',

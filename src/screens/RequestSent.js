@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const RequestSent = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>Request Sent</Text>
+      <Text style={styles.logo}>Done</Text>
       <View style={styles.mainCar}>
         <Image
           style={styles.tinyLogo}

@@ -16,17 +16,14 @@ const SearchDestination = () => {
   const [open, setOpen] = useState(false);
   return (
     <View style={styles.container}>
-      <View style={styles.mainCar}>
-        <Image
-          style={styles.tinyLogo}
-          source={require('../../assets/images/welcome-car.png')}
-        />
-      </View>
+      <Image
+        source={require('../../assets/images/road.png')}
+        style={styles.bgImage}
+      />
       <View style={styles.outerBox}>
         <Text style={styles.headingText}>Your pick of rides at low prices</Text>
         <View style={styles.innerBox}>
-          {/* <Text style={styles.tagline}>Please fill out this field</Text> */}
-          <View>
+          <View style={styles.whiteBgBox}>
             <TextInput
               style={styles.textInput}
               placeholder="Leaving from"
@@ -67,10 +64,10 @@ const SearchDestination = () => {
                 />
               </View>
             </View>
-            <TouchableOpacity style={styles.SubmitButtonStyle}>
-              <Text style={styles.TextStyle}> Next </Text>
-            </TouchableOpacity>
           </View>
+          <TouchableOpacity style={styles.SubmitButtonStyle}>
+            <Text style={styles.TextStyle}> Next </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -81,8 +78,6 @@ export default SearchDestination;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 20,
-    paddingRight: 20,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
@@ -90,13 +85,13 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flex: 1,
   },
-  mainCar: {
-    width: 390,
-    overflow: 'hidden',
-  },
-  tinyLogo: {
-    width: 390,
-    height: 200,
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
   },
   outerBox: {
     textAlign: 'center',
@@ -113,17 +108,20 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
   },
   innerBox: {
-    backgroundColor: theme.APP_BACKGROUND,
-    borderRadius: 10,
-    overflow: 'hidden',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center',
-    width: 326,
+    width: 300,
   },
-
+  whiteBgBox: {
+    backgroundColor: theme.APP_BACKGROUND,
+    overflow: 'hidden',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 60,
+    paddingBottom: 50,
+    textAlign: 'center',
+    width: '100%',
+    borderRadius: 30,
+    marginBottom: 15,
+  },
   textInput: {
     color: theme.APP_BACKGROUND,
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -142,7 +140,7 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     borderRadius: 10,
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
   },
   TextStyle: {
     textAlign: 'center',

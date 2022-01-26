@@ -8,8 +8,6 @@ import {
   Image,
 } from 'react-native';
 import theme from '../styles/theme.style';
-
-// const image = {uri: '../../assets/images/avtar.png'};
 const Login = () => {
   return (
     <View style={styles.container}>
@@ -43,9 +41,6 @@ const Login = () => {
             <Text style={styles.TextStyle}> Sing Up </Text>
           </TouchableOpacity>
         </View>
-        {/* <View style={styles.lastLInks}>
-        
-        </View> */}
       </View>
     </View>
   );
@@ -58,7 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: '#FFC100',
+    backgroundColor: theme.PRIMARY_COLOR,
     alignContent: 'center',
     flex: 1,
   },
@@ -78,10 +73,10 @@ const styles = StyleSheet.create({
   headingText: {
     color: theme.BLACK_COLOR,
     fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 30,
-    fontFamily: 'Lato-Bold',
-    fontWeight: '900',
+    marginBottom: 20,
+    fontFamily: 'Lato-Regular',
     textTransform: 'capitalize',
   },
   innerBox: {
@@ -101,10 +96,9 @@ const styles = StyleSheet.create({
   },
   tagline: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    color: 'black',
+    color: theme.BLACK_COLOR,
     marginBottom: 15,
     fontWeight: '600',
-    // fontStyle: 'italic',
     fontFamily: 'Lato-thin',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -159,7 +153,6 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     borderRadius: 10,
     backgroundColor: theme.BLACK_COLOR,
-    // width: 265,
     fontFamily: 'Lato-thin',
   },
 });

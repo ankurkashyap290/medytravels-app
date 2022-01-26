@@ -16,158 +16,174 @@ const VehiclesFullList = () => {
     <SafeAreaView>
       <ScrollView>
         <View style={styles.container}>
-          <View style={styles.layout}>
-            <TouchableOpacity style={styles.backButton}>
-              <Icon name="chevron-back-outline" style={styles.arrowRight} />
-            </TouchableOpacity>
-            <View>
-              <Text style={styles.locationHeading}>
-                This ride has already departed.
-              </Text>
-              <Text style={styles.locationSubLine}>Sat 01 january</Text>
+          <Image
+            source={require('../../assets/images/road.png')}
+            style={styles.bgImage}
+          />
+          <View style={styles.outerBox}>
+            <View style={styles.layout}>
+              <TouchableOpacity style={styles.backButton}>
+                <Icon name="chevron-back-outline" style={styles.arrowRight} />
+              </TouchableOpacity>
+              <View>
+                <Text style={styles.locationHeading}>
+                  This ride has already departed.
+                </Text>
+                <Text style={styles.locationSubLine}>Sat 01 january</Text>
+              </View>
             </View>
-          </View>
-          <View style={styles.filterLayout}>
-            <View style={styles.filterIconOuter}>
-              <Icon name="ios-walk-sharp" size={30} color="#fff" />
+            <View style={styles.filterLayout}>
+              <View style={styles.filterIconOuter}>
+                <Icon name="ios-walk-sharp" size={30} color="#fff" />
+              </View>
+              <View style={styles.filterTextBox}>
+                <Text style={styles.filterHeading}>
+                  ISBT Kashmiri Gate, New Delhi
+                </Text>
+                <Text style={styles.FilterPara}>
+                  2.1 km from your departure
+                </Text>
+              </View>
             </View>
-            <View style={styles.filterTextBox}>
-              <Text style={styles.filterHeading}>
-                ISBT Kashmiri Gate, New Delhi
-              </Text>
-              <Text style={styles.FilterPara}>2.1 km from your departure</Text>
-            </View>
-          </View>
 
-          <View style={styles.filterLayout}>
-            <View style={styles.filterIconOuterOrg}>
-              <Icon name="ios-walk-sharp" size={30} color="#fff" />
+            <View style={styles.filterLayout}>
+              <View style={styles.filterIconOuterOrg}>
+                <Icon name="ios-walk-sharp" size={30} color="#fff" />
+              </View>
+              <View style={styles.filterTextBox}>
+                <Text style={styles.filterHeading}>
+                  Nagrota bagwan bus stand
+                </Text>
+                <Text style={styles.FilterPara}>2.2 km from your arrival</Text>
+              </View>
             </View>
-            <View style={styles.filterTextBox}>
-              <Text style={styles.filterHeading}>Nagrota bagwan bus stand</Text>
-              <Text style={styles.FilterPara}>2.2 km from your arrival</Text>
-            </View>
-          </View>
 
-          <View style={styles.innerBox}>
-            <View style={styles.personAvtar}>
-              <View style={styles.avtarIconOuter}>
+            <View style={styles.innerBox}>
+              <View style={styles.personAvtar}>
+                <View style={styles.avtarIconOuter}>
+                  <Image
+                    style={styles.avtarIcon}
+                    source={require('../../assets/images/av1.jpg')}
+                  />
+                </View>
+                <View style={styles.avtarTextBox}>
+                  <Text style={styles.avtarHeading}>Ruby </Text>
+                  <Text style={styles.avtarHeading}>5.0/5 ratings</Text>
+                  <View style={styles.avtarStars}>
+                    <Image
+                      style={styles.starIcon}
+                      source={require('../../assets/images/star.png')}
+                    />
+                    <Image
+                      style={styles.starIcon}
+                      source={require('../../assets/images/star.png')}
+                    />
+                    <Image
+                      style={styles.starIcon}
+                      source={require('../../assets/images/star.png')}
+                    />
+                    <Image
+                      style={styles.starIcon}
+                      source={require('../../assets/images/starno.png')}
+                    />
+                    <Image
+                      style={styles.starIcon}
+                      source={require('../../assets/images/starno.png')}
+                    />
+                  </View>
+                </View>
+              </View>
+              <Text style={styles.rateText}>
+                Total Price for 1 passenger 900 Rs
+              </Text>
+
+              <View style={styles.timeLayout}>
+                <View style={styles.textCol}>
+                  <Text style={styles.timeHeading}>Staring Time</Text>
+                  <Text style={styles.timeSubHeading}>10:00 am</Text>
+                  <Text style={styles.timeSubHeading}>Delhi</Text>
+                </View>
+                <View>
+                  <Text style={styles.timeAp}>10h 40m</Text>
+                </View>
+                <View style={styles.textCol}>
+                  <Text style={styles.timeHeading}>Reach time </Text>
+                  <Text style={styles.timeSubHeading}>9:00 pm</Text>
+                  <Text style={styles.timeSubHeading}>Shahpur</Text>
+                </View>
+              </View>
+              <View style={styles.smokingBox}>
+                <Text style={styles.smoText}>Show your id prof</Text>
+                <Text style={styles.smoText}>
+                  Drinking and shmoking not Allowed
+                </Text>
+              </View>
+              <View style={styles.petIconBox}>
                 <Image
-                  style={styles.avtarIcon}
+                  style={styles.petIcon}
+                  source={require('../../assets/images/nosmoking.png')}
+                />
+                <Text style={styles.petText}>No Smoking</Text>
+              </View>
+              <View style={styles.petIconBox}>
+                <Image
+                  style={styles.petIcon}
+                  source={require('../../assets/images/nopet.png')}
+                />
+                <Text style={styles.petText}>No Pets</Text>
+              </View>
+              <View style={styles.petIconBox}>
+                <Icon
+                  name="car-sport"
+                  size={30}
+                  color="#000"
+                  style={styles.petIcon}
+                />
+                <Text style={styles.petText}>
+                  MARUTI SWIFT DZIRE (Dark grey)
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.layout}>
+              <Text style={styles.PassHeading}>Passengers</Text>
+            </View>
+            <View style={styles.filterLayout}>
+              <View style={styles.passIconBox}>
+                <Image
+                  style={styles.passIcon}
                   source={require('../../assets/images/av1.jpg')}
                 />
               </View>
-              <View style={styles.avtarTextBox}>
-                <Text style={styles.avtarHeading}>Ruby </Text>
-                <Text style={styles.avtarHeading}>5.0/5 ratings</Text>
-                <View style={styles.avtarStars}>
-                  <Image
-                    style={styles.starIcon}
-                    source={require('../../assets/images/star.png')}
-                  />
-                  <Image
-                    style={styles.starIcon}
-                    source={require('../../assets/images/star.png')}
-                  />
-                  <Image
-                    style={styles.starIcon}
-                    source={require('../../assets/images/star.png')}
-                  />
-                  <Image
-                    style={styles.starIcon}
-                    source={require('../../assets/images/starno.png')}
-                  />
-                  <Image
-                    style={styles.starIcon}
-                    source={require('../../assets/images/starno.png')}
-                  />
-                </View>
+              <View style={styles.filterTextBox}>
+                <Text style={styles.filterHeading}>Nindi</Text>
+                <Text style={styles.FilterPara}>
+                  New Delhi to Nagrota Bagwan
+                </Text>
               </View>
             </View>
-            <Text style={styles.rateText}>
-              Total Price for 1 passenger 900 Rs
-            </Text>
 
-            <View style={styles.timeLayout}>
-              <View style={styles.textCol}>
-                <Text style={styles.timeHeading}>Staring Time</Text>
-                <Text style={styles.timeSubHeading}>10:00 am</Text>
-                <Text style={styles.timeSubHeading}>Delhi</Text>
+            <View style={styles.filterLayout}>
+              <View style={styles.passIconBox}>
+                <Image
+                  style={styles.passIcon}
+                  source={require('../../assets/images/avtar.png')}
+                />
               </View>
-              <View>
-                <Text style={styles.timeAp}>10h 40m</Text>
-              </View>
-              <View style={styles.textCol}>
-                <Text style={styles.timeHeading}>Reach time </Text>
-                <Text style={styles.timeSubHeading}>9:00 pm</Text>
-                <Text style={styles.timeSubHeading}>Shahpur</Text>
+              <View style={styles.filterTextBox}>
+                <Text style={styles.filterHeading}>Ron david</Text>
+                <Text style={styles.FilterPara}>
+                  New Delhi to Nagrota Bagwan
+                </Text>
               </View>
             </View>
-            <View style={styles.smokingBox}>
-              <Text style={styles.smoText}>Show your id prof</Text>
-              <Text style={styles.smoText}>
-                Drinking and shmoking not Allowed
-              </Text>
-            </View>
-            <View style={styles.petIconBox}>
-              <Image
-                style={styles.petIcon}
-                source={require('../../assets/images/nosmoking.png')}
-              />
-              <Text style={styles.petText}>No Smoking</Text>
-            </View>
-            <View style={styles.petIconBox}>
-              <Image
-                style={styles.petIcon}
-                source={require('../../assets/images/nopet.png')}
-              />
-              <Text style={styles.petText}>No Pets</Text>
-            </View>
-            <View style={styles.petIconBox}>
-              <Icon
-                name="car-sport"
-                size={30}
-                color="#000"
-                style={styles.petIcon}
-              />
-              <Text style={styles.petText}>MARUTI SWIFT DZIRE (Dark grey)</Text>
-            </View>
+            <TouchableOpacity style={styles.alertBox}>
+              <Text style={styles.alertText}> Report ride</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.alertBox2}>
+              <Text style={styles.alertText}>Continue</Text>
+            </TouchableOpacity>
           </View>
-
-          <View style={styles.layout}>
-            <Text style={styles.PassHeading}>Passengers</Text>
-          </View>
-          <View style={styles.filterLayout}>
-            <View style={styles.passIconBox}>
-              <Image
-                style={styles.passIcon}
-                source={require('../../assets/images/av1.jpg')}
-              />
-            </View>
-            <View style={styles.filterTextBox}>
-              <Text style={styles.filterHeading}>Nindi</Text>
-              <Text style={styles.FilterPara}>New Delhi to Nagrota Bagwan</Text>
-            </View>
-          </View>
-
-          <View style={styles.filterLayout}>
-            <View style={styles.passIconBox}>
-              <Image
-                style={styles.passIcon}
-                source={require('../../assets/images/avtar.png')}
-              />
-            </View>
-            <View style={styles.filterTextBox}>
-              <Text style={styles.filterHeading}>Ron david</Text>
-              <Text style={styles.FilterPara}>New Delhi to Nagrota Bagwan</Text>
-            </View>
-          </View>
-          <TouchableOpacity style={styles.alertBox}>
-            <Text style={styles.alertText}> Report ride</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.alertBox2}>
-            <Text style={styles.alertText}>Continue</Text>
-          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -182,12 +198,24 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     flexDirection: 'column',
     backgroundColor: theme.PRIMARY_COLOR,
-    paddingLeft: 20,
-    paddingRight: 20,
+    // paddingLeft: 20,
+    // paddingRight: 20,
     paddingTop: 15,
     paddingBottom: 30,
   },
-
+  bgImage: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    resizeMode: 'cover',
+    width: '100%',
+    height: 500,
+  },
+  outerBox: {
+    textAlign: 'center',
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
   innerBox: {
     backgroundColor: theme.APP_BACKGROUND,
     borderRadius: 10,
@@ -246,7 +274,7 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   filterLayout: {
-    backgroundColor: theme.SECONDARY_COLOR,
+    backgroundColor: '#444',
     borderRadius: 20,
     flexDirection: 'row',
     alignItems: 'center',
@@ -394,16 +422,20 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   alertBox: {
-    backgroundColor: theme.BLACK_COLOR,
-    marginTop: 20,
-    marginBottom: 10,
-    borderRadius: 10,
-  },
-  alertBox2: {
     backgroundColor: '#82c91e',
     marginTop: 20,
     marginBottom: 10,
     borderRadius: 10,
+    paddingTop: 6,
+    paddingBottom: 6,
+  },
+  alertBox2: {
+    backgroundColor: theme.BLACK_COLOR,
+    marginTop: 20,
+    marginBottom: 10,
+    borderRadius: 10,
+    paddingTop: 6,
+    paddingBottom: 6,
   },
   alertText: {
     color: theme.APP_BACKGROUND,
